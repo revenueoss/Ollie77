@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: 'Fraunces', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  
+  /* Warm Crisp Travertine & Editorial Canvas */
+  --color-travertine: #F7F5F0;
+  --color-travertine-card: #FFFFFF;
+  --color-travertine-subtle: #EFECE4;
+  --color-travertine-hover: #E7E2D3;
+
+  /* Warm Umber & Deep Espresso (Tones directly related to the warm background) */
+  --color-umber: #231F1C;
+  --color-umber-dark: #1B1815;
+  --color-umber-deep: #141210;
+  --color-umber-surface: #302A24;
+  --color-umber-surface-hover: #3D352E;
+  --color-umber-border: rgba(255, 255, 255, 0.12);
+
+  /* Warm Golden Sand & Honey Ochre Accents (from reference image) */
+  --color-sand-accent: #E6AF47;
+  --color-sand-hover: #D89E34;
+  --color-sand-subtle: #F7EEDA;
+  --color-sand-border: #E8D5B0;
+
+  /* Deep Warm Earth & Editorial Charcoal Typography */
+  --color-earth-headline: #201B17;
+  --color-earth-body: #4A433B;
+  --color-earth-muted: #736A5E;
+
+  /* Warm sandstone hairline borders */
+  --color-stone-border: #E2DDD1;
+  --color-stone-border-dark: #D4CEBF;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #F7F5F0;
+  color: #201B17;
+}
+
+h1, h2, h3, .font-editorial {
+  font-family: var(--font-serif);
+}
+
+/* Warm honey amber marker highlight directly matching user's uploaded reference image */
+.editorial-highlight {
+  background-color: #F3C363;
+  color: #201B17;
+  padding: 0.08em 0.35em;
+  border-radius: 2px;
+  display: inline-block;
+  font-weight: 500;
+  box-shadow: 0 1px 2px rgba(35, 31, 28, 0.08);
+}
+
+.editorial-highlight-amber {
+  background-color: #F5CD78;
+  color: #201B17;
+  padding: 0.08em 0.35em;
+  border-radius: 2px;
+  display: inline-block;
+}

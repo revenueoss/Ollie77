@@ -1,0 +1,6 @@
+{
+  "name": "Ollie — Managed Plumbing Revenue System",
+  "description": "The managed revenue and inquiry capture system for US plumbing businesses. Turn local demand into customer opportunities without leaving calls, estimates, or reviews unattended.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
