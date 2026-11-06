@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ChevronDown, HelpCircle } from 'lucide-react';
+import { ChevronDown, HelpCircle, ArrowUpRight } from 'lucide-react';
 import { FaqItem } from '../types';
 
 export const FaqSection: React.FC = () => {
@@ -106,6 +106,20 @@ export const FaqSection: React.FC = () => {
               </div>
             );
           })}
+        </div>
+
+        {/* Clear bridge to Onboarding Form right below */}
+        <div className="pt-10 text-center">
+          <p className="text-xs font-mono uppercase tracking-[0.2em] text-[#736A5E] mb-3">
+            Ready to stop missed-call leakage?
+          </p>
+          <a
+            href="#onboarding-intake-form"
+            className="inline-flex items-center gap-2 px-6 py-3.5 text-xs sm:text-sm font-semibold tracking-wide text-[#201B17] bg-[#F3C363] border border-[#231F1C]/15 rounded-xs hover:bg-[#E6AF47] transition-all cursor-pointer shadow-xs hover:shadow"
+          >
+            <span>Proceed to 5-Stage Shop Onboarding Form</span>
+            <ArrowUpRight className="w-4 h-4" />
+          </a>
         </div>
       </div>
     </section>

@@ -30,9 +30,10 @@ const BOTTLENECKS = [
 
 interface OnboardingIntakePortalProps {
   onOpenSpecs?: () => void;
+  middleSections?: React.ReactNode;
 }
 
-export const OnboardingIntakePortal: React.FC<OnboardingIntakePortalProps> = ({ onOpenSpecs }) => {
+export const OnboardingIntakePortal: React.FC<OnboardingIntakePortalProps> = ({ onOpenSpecs, middleSections }) => {
   const targetEmail = 'ollie.os@aol.com';
 
   const [formData, setFormData] = useState<OnboardingIntakeData>({
@@ -204,33 +205,33 @@ export const OnboardingIntakePortal: React.FC<OnboardingIntakePortalProps> = ({ 
 
           {/* ========================================================= */}
           {/* SECTION 1 (70% WEIGHT): THE REAL PROBLEMS WE SOLVE        */}
-          {/* Unfiltered, painful reality of running a plumbing shop    */}
+          {/* Unfiltered, clear reality of where plumbing shops bleed   */}
           {/* ========================================================= */}
           <section id="problems-we-solve" className="space-y-12 sm:space-y-16">
-            {/* Editorial Category Header (Centered) */}
-            <div className="space-y-4 max-w-4xl mx-auto text-center">
+            {/* Centered Editorial Header */}
+            <div className="space-y-4 max-w-3xl mx-auto text-center">
               <div className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.25em] text-[#A25A3C] font-semibold mx-auto">
                 <span className="w-2 h-2 rounded-full bg-[#A25A3C]" />
-                <span>The Diagnostic Reality // Where US Plumbers Bleed Revenue</span>
+                <span>The Diagnostic Reality // 70% Problems We Solve</span>
               </div>
-              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-serif font-normal text-[#201B17] tracking-tight leading-[1.08] mx-auto">
+              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-serif font-normal text-[#201B17] tracking-tight leading-[1.08]">
                 Plumbing work is brutal.{' '}
-                <span className="italic font-normal text-[#4A433B]">
+                <span className="italic font-normal text-[#4A433B] block sm:inline">
                   Losing $15,000 to $30,000 every month in missed calls shouldn&apos;t be.
                 </span>
               </h1>
-              <p className="text-base sm:text-lg text-[#736A5E] font-serif leading-relaxed max-w-3xl mx-auto">
-                When you or your technicians are under sinks, soldering copper, or running snakes down main lines, phones keep ringing. Here is the exact breakdown of how independent shops lose 70% of their highest-margin opportunities before a wrench ever turns:
+              <p className="text-base sm:text-lg text-[#736A5E] font-serif leading-relaxed max-w-2xl mx-auto">
+                When technicians are under sinks, soldering copper, or running main snakes, phones keep ringing. Here is the exact breakdown of how independent shops bleed revenue:
               </p>
             </div>
 
-            {/* Problem Breakdown Matrix: 4 Core Bleeding Arteries */}
+            {/* Clean 4-Problem Breakdown */}
             <div className="divide-y divide-[#E2DDD1] border-y border-[#201B17]">
               {/* Problem 01 */}
               <div className="py-8 sm:py-10 grid grid-cols-1 md:grid-cols-12 gap-6 lg:gap-10 items-baseline">
-                <div className="md:col-span-3 space-y-1">
-                  <span className="font-mono text-xs uppercase tracking-[0.2em] text-[#A25A3C] font-bold">
-                    Problem 01 // Daytime Leakage
+                <div className="md:col-span-4 space-y-1">
+                  <span className="font-mono text-xs uppercase tracking-[0.2em] text-[#A25A3C] font-bold block">
+                    Problem 01 · Daytime Leakage
                   </span>
                   <div className="text-2xl sm:text-3xl font-mono font-bold text-[#201B17]">
                     62% of Callers
@@ -239,24 +240,21 @@ export const OnboardingIntakePortal: React.FC<OnboardingIntakePortalProps> = ({ 
                     Hang up on voicemail & call competitor #2
                   </div>
                 </div>
-                <div className="md:col-span-9 space-y-2">
+                <div className="md:col-span-8 space-y-2">
                   <h3 className="text-xl sm:text-2xl font-serif font-medium text-[#201B17]">
-                    The technician is under a customer&apos;s house; the $1,800 water heater inquiry goes to voicemail.
+                    The technician is on a job; the $1,800 water heater inquiry goes to voicemail.
                   </h3>
                   <p className="text-sm sm:text-base text-[#4A433B] leading-relaxed">
-                    Homeowners with active leaks or no hot water never leave messages. They hang up within 4 seconds and dial the next verified shop listed on Google Maps. If nobody answers within 2 rings with authority, the job is gone forever.
+                    Homeowners with active leaks or cold water never leave messages. They hang up in 4 seconds and dial the next plumber on Google Maps. If nobody answers within 2 rings with authority, the job slips away forever.
                   </p>
-                  <div className="text-xs font-mono text-[#A25A3C] pt-1">
-                    Cost to your shop: ~$1,200–$2,400 per missed daytime call in gross replacement value.
-                  </div>
                 </div>
               </div>
 
               {/* Problem 02 */}
               <div className="py-8 sm:py-10 grid grid-cols-1 md:grid-cols-12 gap-6 lg:gap-10 items-baseline">
-                <div className="md:col-span-3 space-y-1">
-                  <span className="font-mono text-xs uppercase tracking-[0.2em] text-[#A25A3C] font-bold">
-                    Problem 02 // After-Hours Black Hole
+                <div className="md:col-span-4 space-y-1">
+                  <span className="font-mono text-xs uppercase tracking-[0.2em] text-[#A25A3C] font-bold block">
+                    Problem 02 · After-Hours Void
                   </span>
                   <div className="text-2xl sm:text-3xl font-mono font-bold text-[#201B17]">
                     7:15 PM Floods
@@ -265,24 +263,21 @@ export const OnboardingIntakePortal: React.FC<OnboardingIntakePortalProps> = ({ 
                     Answering services take messages that arrive 8h late
                   </div>
                 </div>
-                <div className="md:col-span-9 space-y-2">
+                <div className="md:col-span-8 space-y-2">
                   <h3 className="text-xl sm:text-2xl font-serif font-medium text-[#201B17]">
-                    Generic answering services that sound asleep, don&apos;t know what a main shutoff is, or charge $3.50/minute to type misspelled notes.
+                    Generic answering services charge $3.50/min and have zero plumbing triage knowledge.
                   </h3>
                   <p className="text-sm sm:text-base text-[#4A433B] leading-relaxed">
-                    Emergency pipe bursts and sewer backups occur evenings and weekends. Generic call centers tell panicked homeowners &ldquo;we will have an associate call you back during business hours,&rdquo; causing them to hang up instantly and pay your competitor premium emergency rates.
+                    Emergency pipe bursts happen on evenings and weekends. Generic call centers tell panicked homeowners &ldquo;someone will call you tomorrow morning,&rdquo; causing them to dial private-equity emergency franchises instead.
                   </p>
-                  <div className="text-xs font-mono text-[#A25A3C] pt-1">
-                    Cost to your shop: ~$3,500 emergency sewer & repipe tickets lost to franchise 24/7 operators.
-                  </div>
                 </div>
               </div>
 
               {/* Problem 03 */}
               <div className="py-8 sm:py-10 grid grid-cols-1 md:grid-cols-12 gap-6 lg:gap-10 items-baseline">
-                <div className="md:col-span-3 space-y-1">
-                  <span className="font-mono text-xs uppercase tracking-[0.2em] text-[#A25A3C] font-bold">
-                    Problem 03 // Open-Estimate Graveyard
+                <div className="md:col-span-4 space-y-1">
+                  <span className="font-mono text-xs uppercase tracking-[0.2em] text-[#A25A3C] font-bold block">
+                    Problem 03 · Cold Estimates
                   </span>
                   <div className="text-2xl sm:text-3xl font-mono font-bold text-[#201B17]">
                     $45,000+ Sent
@@ -291,61 +286,55 @@ export const OnboardingIntakePortal: React.FC<OnboardingIntakePortalProps> = ({ 
                     Zero structured follow-up after the PDF is emailed
                   </div>
                 </div>
-                <div className="md:col-span-9 space-y-2">
+                <div className="md:col-span-8 space-y-2">
                   <h3 className="text-xl sm:text-2xl font-serif font-medium text-[#201B17]">
-                    High-ticket quotes ($1,500 to $9,000) go completely cold because technicians hate &ldquo;sales pitching&rdquo; and have zero time to call back.
+                    High-ticket quotes ($1,500 to $9,000) stall because technicians have zero time to make sales calls.
                   </h3>
                   <p className="text-sm sm:text-base text-[#4A433B] leading-relaxed">
-                    You spent 90 minutes driving to a home, inspecting a failing water line, and preparing an itemized quote in ServiceTitan or Jobber. The homeowner intends to buy, but gets distracted. Because nobody politely follows up at 48 hours and 5 days, another shop sweeps in or the customer delays the project indefinitely.
+                    You inspected the water line, wrote up the estimate in ServiceTitan or Jobber, and emailed it. The customer gets busy. Without polite check-in texts at 48 hours and 5 days, 20%+ of your quotes die from sheer silence.
                   </p>
-                  <div className="text-xs font-mono text-[#A25A3C] pt-1">
-                    Cost to your shop: 15% to 28% of quotes die purely from lack of a polite 1-sentence check-in text.
-                  </div>
                 </div>
               </div>
 
               {/* Problem 04 */}
               <div className="py-8 sm:py-10 grid grid-cols-1 md:grid-cols-12 gap-6 lg:gap-10 items-baseline">
-                <div className="md:col-span-3 space-y-1">
-                  <span className="font-mono text-xs uppercase tracking-[0.2em] text-[#A25A3C] font-bold">
-                    Problem 04 // Google Map Decay
+                <div className="md:col-span-4 space-y-1">
+                  <span className="font-mono text-xs uppercase tracking-[0.2em] text-[#A25A3C] font-bold block">
+                    Problem 04 · Google Map Decay
                   </span>
                   <div className="text-2xl sm:text-3xl font-mono font-bold text-[#201B17]">
                     Outranked
                   </div>
                   <div className="text-xs font-mono text-[#736A5E]">
-                    By mediocre franchises with fresher reviews
+                    By franchise shops with fresher reviews
                   </div>
                 </div>
-                <div className="md:col-span-9 space-y-2">
+                <div className="md:col-span-8 space-y-2">
                   <h3 className="text-xl sm:text-2xl font-serif font-medium text-[#201B17]">
-                    Delivering flawless 5-star master craftsmanship, but forgetting to ask for the review before driving off to the next job.
+                    Delivering 5-star master craftsmanship, but forgetting to ask for the review before driving off.
                   </h3>
                   <p className="text-sm sm:text-base text-[#4A433B] leading-relaxed">
-                    Satisfied customers promise they will leave a Google review, but once hot water is restored and the invoice is paid, life gets in the way. Without an immediate, one-tap SMS review link sent the minute the job finishes, your review count stalls while large private-equity plumbing consolidators push you out of the local Google 3-Pack.
+                    Happy homeowners promise to leave a Google review, but once hot water is restored, life moves on. Without a clean, 1-tap SMS link sent immediately upon job completion, your Google Map ranking stagnates.
                   </p>
-                  <div className="text-xs font-mono text-[#A25A3C] pt-1">
-                    Cost to your shop: Gradual loss of #1 Map ranking = 30 to 60 fewer inbound calls each season.
-                  </div>
                 </div>
               </div>
             </div>
 
-            {/* Clear Bridge to the Solution */}
-            <div className="flex flex-col sm:flex-row items-baseline justify-between pt-2 gap-4">
-              <div className="space-y-1">
-                <span className="text-xs font-mono uppercase tracking-[0.2em] text-[#201B17] font-bold">
-                  The Sum of the Bleed
+            {/* Clear Bridge */}
+            <div className="flex flex-col sm:flex-row items-baseline justify-between pt-2 gap-4 border-b border-[#D4CEBF] pb-8">
+              <div>
+                <span className="text-xs font-mono uppercase tracking-[0.2em] text-[#201B17] font-bold block">
+                  The Conservative Net Loss
                 </span>
-                <p className="text-sm text-[#736A5E] max-w-xl">
-                  Average 3-van plumbing shop loses <strong className="text-[#201B17]">$21,250 every single month</strong> in unrecovered calls and un-followed estimates.
+                <p className="text-sm text-[#736A5E]">
+                  A typical 2–4 van shop loses <strong className="text-[#201B17] font-mono">$21,250/mo</strong> in unrecovered calls and un-followed quotes.
                 </p>
               </div>
               <a
                 href="#the-solution"
                 className="inline-flex items-center gap-2 text-xs font-mono font-semibold uppercase tracking-wider text-[#201B17] hover:underline"
               >
-                <span>Examine How Ollie Fixes This</span>
+                <span>Read the Managed Solution (20%)</span>
                 <ArrowUpRight className="w-4 h-4" />
               </a>
             </div>
@@ -356,21 +345,21 @@ export const OnboardingIntakePortal: React.FC<OnboardingIntakePortalProps> = ({ 
           {/* SECTION 2 (20% WEIGHT): THE MANAGED SOLUTION               */}
           {/* How Ollie plugs every leak with zero tech burden for you   */}
           {/* ========================================================= */}
-          <section id="the-solution" className="pt-16 sm:pt-20 border-t border-[#201B17] space-y-12">
+          <section id="the-solution" className="pt-16 sm:pt-20 space-y-12">
             {/* Solution Header (Centered) */}
-            <div className="space-y-3 max-w-4xl mx-auto text-center">
+            <div className="space-y-3 max-w-3xl mx-auto text-center">
               <div className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.25em] text-[#736A5E] font-semibold mx-auto">
                 <span className="w-2 h-2 rounded-full bg-[#E6AF47]" />
                 <span>The Engineered Remedy // 20% Solution</span>
               </div>
-              <h2 className="text-3xl sm:text-5xl font-serif font-normal text-[#201B17] tracking-tight leading-[1.12] mx-auto">
+              <h2 className="text-3xl sm:text-5xl font-serif font-normal text-[#201B17] tracking-tight leading-[1.12]">
                 One fully managed revenue system.{' '}
-                <span className="italic font-normal text-[#4A433B]">
+                <span className="italic font-normal text-[#4A433B] block sm:inline">
                   No software to learn. No staff to hire.
                 </span>
               </h2>
-              <p className="text-base sm:text-lg text-[#736A5E] font-serif leading-relaxed max-w-3xl mx-auto">
-                Ollie sits on top of your existing phone number and dispatch tool (ServiceTitan, Housecall Pro, Jobber, or QuickBooks). We don&apos;t sell leads. We capture the high-intent calls and estimates you are already paying for.
+              <p className="text-base sm:text-lg text-[#736A5E] font-serif leading-relaxed max-w-2xl mx-auto">
+                Ollie sits on top of your existing phone number and dispatch tool (ServiceTitan, Housecall Pro, Jobber, QuickBooks). We do not sell leads. We capture the high-intent calls you are already paying for.
               </p>
             </div>
 
@@ -378,19 +367,19 @@ export const OnboardingIntakePortal: React.FC<OnboardingIntakePortalProps> = ({ 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-4">
               <div className="border-t-2 border-[#201B17] pt-5 space-y-3 text-center sm:text-left">
                 <div className="font-mono text-xs uppercase tracking-[0.2em] text-[#736A5E]">
-                  Pillar 01 // 2-Ring Voice Intake
+                  Pillar 01 · 2-Ring Voice Intake
                 </div>
                 <h4 className="text-xl font-serif font-medium text-[#201B17]">
                   Instant Answering & Emergency Flood Triage
                 </h4>
                 <p className="text-sm text-[#4A433B] leading-relaxed">
-                  Every call answered in under 2 rings with custom plumbing knowledge: symptoms, address, shutoff status, and instant dispatch notifications to your techs.
+                  Every call answered in under 2 rings with custom plumbing knowledge: symptoms, address, shutoff status, and instant dispatch notifications.
                 </p>
               </div>
 
               <div className="border-t-2 border-[#201B17] pt-5 space-y-3 text-center sm:text-left">
                 <div className="font-mono text-xs uppercase tracking-[0.2em] text-[#736A5E]">
-                  Pillar 02 // Estimate Recapture
+                  Pillar 02 · Estimate Recapture
                 </div>
                 <h4 className="text-xl font-serif font-medium text-[#201B17]">
                   Polite, Automated Quote Follow-Ups
@@ -402,7 +391,7 @@ export const OnboardingIntakePortal: React.FC<OnboardingIntakePortalProps> = ({ 
 
               <div className="border-t-2 border-[#201B17] pt-5 space-y-3 text-center sm:text-left">
                 <div className="font-mono text-xs uppercase tracking-[0.2em] text-[#736A5E]">
-                  Pillar 03 // Reputation Velocity
+                  Pillar 03 · Reputation Velocity
                 </div>
                 <h4 className="text-xl font-serif font-medium text-[#201B17]">
                   Post-Job Google 3-Pack Protection
@@ -413,22 +402,24 @@ export const OnboardingIntakePortal: React.FC<OnboardingIntakePortalProps> = ({ 
               </div>
             </div>
 
-            {/* Solution Summary Ledger Strip */}
-            <div className="flex flex-col sm:flex-row items-baseline justify-between border-t border-b border-[#D4CEBF] py-5 gap-4">
+            {/* Smooth transition strip down to Pricing, FAQ, and Onboarding */}
+            <div className="flex flex-col sm:flex-row items-center justify-between border-t border-b border-[#D4CEBF] py-5 gap-4">
               <div className="font-mono text-xs text-[#201B17]">
-                <span className="font-bold uppercase tracking-wider block">Managed Turnkey Operations</span>
-                <span className="text-[#736A5E]">$397/mo flat · Zero setup fees · Cancel anytime · Routes to ollie.os@aol.com</span>
+                <span className="font-bold uppercase tracking-wider block">Turnkey Managed Retainer</span>
+                <span className="text-[#736A5E]">$397/mo flat · Month-to-month · Zero setup fees · Cancel anytime</span>
               </div>
               <a
-                href="#onboarding-intake-form"
+                href="#pricing"
                 className="inline-flex items-center gap-2 px-5 py-2.5 text-xs font-mono font-bold uppercase tracking-wider text-[#201B17] bg-[#F3C363] hover:bg-[#E6AF47] rounded-xs shadow-2xs transition-colors"
               >
-                <span>Jump Down to 10% Intake Below</span>
+                <span>Review Pricing & Inclusions Below</span>
                 <ArrowUpRight className="w-4 h-4" />
               </a>
             </div>
           </section>
 
+          {/* RENDER INLINE PRICING & FAQ SECTIONS HERE BEFORE THE ONBOARDING INTAKE FORM */}
+          {middleSections}
 
           {/* ========================================================= */}
           {/* SECTION 3 (10% WEIGHT): ONBOARDING / INTAKE FORM          */}

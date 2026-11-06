@@ -81,19 +81,21 @@ export default function App() {
 
       {/* Main Single-Page Content Area */}
       <main className="flex-1">
-        {/* SECTION 1, 2, & 3: THE 70% PROBLEMS, 20% SOLUTION, AND 10% ONBOARDING INTAKE FORM */}
         <OnboardingIntakePortal
           onOpenSpecs={() => {
             const el = document.getElementById('pricing');
             if (el) el.scrollIntoView({ behavior: 'smooth' });
           }}
+          middleSections={
+            <>
+              {/* SECTION: COMPLETE PRICING & INCLUSIONS LEDGER */}
+              <PricingSection onOpenAudit={switchToIntake} />
+
+              {/* SECTION: OPERATIONAL FAQS */}
+              <FaqSection />
+            </>
+          }
         />
-
-        {/* SECTION 4: COMPLETE PRICING & INCLUSIONS LEDGER */}
-        <PricingSection onOpenAudit={switchToIntake} />
-
-        {/* SECTION 5: OPERATIONAL FAQS */}
-        <FaqSection />
       </main>
 
       {/* Global Grounded Editorial Footer */}

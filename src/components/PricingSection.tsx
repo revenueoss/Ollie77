@@ -82,13 +82,13 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ onOpenAudit }) =
               <span className="text-xs sm:text-sm font-sans font-medium text-[#736A5E]">USD / mo</span>
             </div>
 
-            <button
-              onClick={onOpenAudit}
+            <a
+              href="#onboarding-intake-form"
               className="inline-flex items-center gap-2 px-6 py-3 text-xs sm:text-sm font-semibold tracking-wide text-[#201B17] bg-[#F3C363] border border-[#231F1C]/15 rounded-xs hover:bg-[#E6AF47] transition-all cursor-pointer shadow-xs hover:shadow whitespace-nowrap"
             >
-              <span>Request Revenue Audit</span>
+              <span>Onboard Your Shop Below</span>
               <ArrowUpRight className="w-3.5 h-3.5" />
-            </button>
+            </a>
           </div>
         </div>
 
